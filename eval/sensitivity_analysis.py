@@ -75,6 +75,7 @@ def granularity_invariance(embedder):
         per_granularity = {}
         for n in step_counts:
             scorer = DriftScorer(step_threshold=99, cumulative_threshold=99)  # observe only
+            scorer.observe(baseline)  # frac=0.0 -- establishes the TRUE baseline first
             fire_fraction = None
             for i in range(1, n + 1):
                 frac = i / n
