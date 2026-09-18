@@ -1,0 +1,38 @@
+{
+  "embedder": "sentence-transformers:all-MiniLM-L6-v2",
+  "drift": {
+    "malicious_peak_drift": {
+      "min": 0.3825809955596924,
+      "mean": 0.4642348408699036,
+      "max": 0.608734667301178
+    },
+    "benign_peak_drift": {
+      "min": 0.1437307596206665,
+      "mean": 0.18969568014144897,
+      "max": 0.22388744354248047
+    },
+    "separable": true,
+    "best": {
+      "threshold": 0.23,
+      "detection_rate": 1.0,
+      "false_positive_rate": 0.0,
+      "youden_j": 1.0
+    }
+  },
+  "density": {
+    "poison_z": {
+      "min": -12.369574984091066,
+      "mean": -9.283658784490374
+    },
+    "benign_z": {
+      "min": -1.4576608173021959,
+      "mean": 0.35534424625478206
+    },
+    "best": {
+      "z_threshold": 1.5,
+      "detection_rate": 1.0,
+      "false_positive_rate": 0.0,
+      "youden_j": 1.0
+    }
+  }
+}
